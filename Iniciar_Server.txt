@@ -1,0 +1,8 @@
+### Crear App React
+npx create-react-app intro-javascript
+
+### Ir al directorio
+cd 02-intro-javascript/
+
+### Iniciar Server
+npm start
