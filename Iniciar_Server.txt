@@ -4,5 +4,10 @@ npx create-react-app intro-javascript
 ### Ir al directorio
 cd 02-intro-javascript/
 
+### Nota: Si es la primera que se descarga del server, ejecutar el siguiente comando 
+### que creará el directorio node_modules que por defecto no se carga al git porque está relacionado en el .gitignore: 
+npm install
+
 ### Iniciar Server
 npm start
+
