@@ -9,6 +9,8 @@ export const FirstApp = () => {
 
 }*/
 
+import PropTypes from 'prop-types';
+
 const myFunction = (a, b) => {
 
     return a+b;
@@ -23,7 +25,12 @@ const newMessage = {
 }
 
 export const FirstApp = ({ title, valor }) => {
-    // <> Es un Fragment sin necesidad de importar    
+    // <> Es un Fragment sin necesidad de importar  
+    
+    if (!title){
+        throw new Error("Prop Title no existe");
+    }
+
     return(
         <>
             
@@ -34,5 +41,12 @@ export const FirstApp = ({ title, valor }) => {
         </>
     );
     
+
+}
+
+FirstApp.propTypes = {
+
+    title: PropTypes.string.isRequired,
+    valor: PropTypes.number.isRequired
 
 }
