@@ -34,7 +34,7 @@ export const FirstApp = ({ title, valor }) => {
     return(
         <>
             
-            <h1>{ /*newMessage.message + " " +newMessage.title*/ myFunction(2,3)   }</h1>
+            <h1>{ /*newMessage.message + " " +newMessage.title - myFunction(2,3)*/    }</h1>
             <h2>{ title }</h2>
             <h3>{ valor }</h3>
             <p>Nuevo Elemento</p>
@@ -49,4 +49,9 @@ FirstApp.propTypes = {
     title: PropTypes.string.isRequired,
     valor: PropTypes.number.isRequired
 
+}
+
+FirstApp.defaultProps = {
+    title: 'Sin Título',
+    valor: 0
 }

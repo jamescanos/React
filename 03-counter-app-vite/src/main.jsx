@@ -10,6 +10,6 @@ import './styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <FirstApp title = "Creando Properties (Prop)" valor = {2022} /> 
+        <FirstApp  /> 
     </React.StrictMode>
 );
