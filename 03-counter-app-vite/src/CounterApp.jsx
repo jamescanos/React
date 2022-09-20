@@ -11,11 +11,29 @@ export const CounterApp = ( { value } ) => {
         setCounter( (c) => c + 1 );
     }
 
+    const handleSubstract = () => { 
+        //setCounter( counter + 1 );
+        if( counter > 0){
+            //setCounter( (c) => c - 1 );
+            setCounter( counter - 1 );
+        }else{
+            throw new Error("Menor a cero (0)");
+        }
+        
+    }
+
+    const Reset = () => {        
+        //setCounter( (c) => value )
+        setCounter( value );
+    }
+
     return(
         <>
             <h1>CounterApp</h1>
             <h2>{ counter }</h2>
             <button onClick={ handleAdd }>+1</button>
+            <button onClick={ handleSubstract }>-1</button>
+            <button onClick={ Reset }>Reset</button>
         </>    
     );
 
