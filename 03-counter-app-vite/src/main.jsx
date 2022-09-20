@@ -4,12 +4,14 @@ import ReactDOM from 'react-dom/client';
 // Se usa cuando es un default
 //import App from './HelloWorldApp';
 //import { HelloWorldApp } from './HelloWorldApp';
-import { FirstApp } from './FirstApp';
+//import { FirstApp } from './FirstApp';
+
+import { CounterApp } from './CounterApp';
 
 import './styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <FirstApp  /> 
+        <CounterApp value = { 1 }  /> 
     </React.StrictMode>
 );
