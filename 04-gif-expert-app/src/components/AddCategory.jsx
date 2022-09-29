@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
 /* 
-    Se desestructura el prop (setCategories) para poder usarlo
-    function AddCategory({ setCategories })
+    Se desestructura el prop (onNewCategory) para poder usarlo
+    function AddCategory({ onNewCategory })
 
 */
-export default function AddCategory({ setCategories }) {
+export default function AddCategory({ onNewCategory }) {
 
     const [ inputValue, setInputValue ] = useState('');
 
@@ -21,12 +21,13 @@ export default function AddCategory({ setCategories }) {
         
         // impide la recarga del form
         event.preventDefault();
-        //console.log( JSON.stringify( setCategories ) );
 
         if( inputValue.trim().length <= 1) return;
-        // Se conservan las categorìas y se agrega un nuevo valor
-        setCategories( categories => [ inputValue, ...categories]);
 
+        // Se conservan las categorìas y se agrega un nuevo valor
+        //setCategories( categories => [ inputValue, ...categories]);
+        onNewCategory( inputValue.trim() );
+        
         setInputValue('');
     }
 
